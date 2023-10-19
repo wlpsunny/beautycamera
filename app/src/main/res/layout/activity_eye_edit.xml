@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_banner_ads">
+
+        <LinearLayout
+            android:id="@+id/eyeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/grid_top"
+                style="@style/FragmentTop"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="onBack"
+                        android:padding="@dimen/margin_15"
+                        android:src="@drawable/ic_back"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_eyeEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/EyeColor"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/doneFinal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ripple_effects"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_margin="12dp"
+                        android:clickable="false"
+                        android:padding="10dp"
+                        android:src="@drawable/done"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/beautyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/beforeAfterEyeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottmLayout"
+            android:layout_alignParentRight="true"
+            android:layout_margin="12dp"
+            android:background="@drawable/afterbefore"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/bottmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/recycleViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbarStyle="outsideInset"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seekBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp">
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    style="@style/CustomSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:maxHeight="5dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/close_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/closebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/ripple_effects">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_margin="12dp"
+                        android:clickable="false"
+                        android:padding="10dp"
+                        android:src="@drawable/cancel"
+                        app:tint="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/doneBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ripple_effects">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_margin="12dp"
+                        android:clickable="false"
+                        android:padding="10dp"
+                        android:src="@drawable/done"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/eyeModes"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_70"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/eyeColorLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_eyeColor"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_eyeColor"
+                        android:src="@drawable/eye_color" />
+
+                    <TextView
+                        android:id="@+id/txt_eyeColor"
+                        style="@style/StyleText"
+                        android:text="@string/Color" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eyeEnlargeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_eyeEnlarge"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_eyeEnlarge"
+                        android:src="@drawable/eye_enlarge" />
+
+                    <TextView
+                        android:id="@+id/txt_eyeEnlarge"
+                        style="@style/StyleText"
+                        android:text="@string/Enlarge" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eyeBrightLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_eyBrighten"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_eyBrighten"
+                        android:src="@drawable/eye_brighten" />
+
+                    <TextView
+                        android:id="@+id/txt_eyBrighten"
+                        style="@style/StyleText"
+                        android:text="@string/Brighten" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eyeBagLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_eyeBag"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_eyeBag"
+                        android:src="@drawable/eyebag" />
+
+                    <TextView
+                        android:id="@+id/txt_eyeBag"
+                        style="@style/StyleText"
+                        android:text="@string/DarkCircle" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_banner_ads"
+        style="@style/StyleAdsRelativeLayout" />
+</RelativeLayout>

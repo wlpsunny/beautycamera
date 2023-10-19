@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_banner_ads">
+
+        <LinearLayout
+            android:id="@+id/Blurtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/grid_top"
+                style="@style/FragmentTop"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="onBack"
+                        android:padding="@dimen/margin_15"
+                        android:src="@drawable/ic_back"/>
+                    <TextView
+                        android:id="@+id/txt_blurEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/Blur"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blur_done_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ripple_effects"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_margin="12dp"
+                        android:clickable="false"
+                        android:padding="10dp"
+                        android:src="@drawable/done"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <view
+            android:id="@+id/blur_image"
+            class="com.eagleapps.beautycam.draw.ImgViewTouchAndDraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/blur_linearlayout"
+            android:layout_below="@+id/Blurtitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY" />
+
+        <view
+            android:id="@+id/blur_image1"
+            class="com.eagleapps.beautycam.draw.ImgViewTouchAndDraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/blur_linearlayout"
+            android:layout_below="@+id/Blurtitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/blur_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/blur_seekbar"
+                style="@style/CustomSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:max="100"
+                android:maxHeight="5dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+
+
+            <LinearLayout
+                android:id="@+id/blur_tablelayout"
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/margin_5"
+                android:layout_height="@dimen/dim_70"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/blur_zoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effects"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout style="@style/StyleRelativeLayout">
+
+                        <ImageView
+                            android:id="@+id/img_blurZoom"
+                            style="@style/StyleImage"
+                            android:layout_above="@+id/txt_blurZoom"
+                            android:src="@drawable/ic_zoom" />
+
+                        <TextView
+                            android:id="@+id/txt_blurZoom"
+                            style="@style/StyleText"
+                            android:text="@string/Zoom" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blur_apply_blur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effects"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout style="@style/StyleRelativeLayout">
+
+                        <ImageView
+                            android:id="@+id/img_blurApply"
+                            style="@style/StyleImage"
+                            android:layout_above="@+id/txt_blurApply"
+                            android:src="@drawable/ic_blur" />
+
+                        <TextView
+                            android:id="@+id/txt_blurApply"
+                            style="@style/StyleText"
+                            android:text="@string/Blur" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blur_eraser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effects"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout style="@style/StyleRelativeLayout">
+
+                        <ImageView
+                            android:id="@+id/img_blurErase"
+                            style="@style/StyleImage"
+                            android:layout_above="@+id/txt_blurErase"
+                            android:src="@drawable/ic_eraser" />
+
+                        <TextView
+                            android:id="@+id/txt_blurErase"
+                            style="@style/StyleText"
+                            android:text="@string/Erase" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_banner_ads"
+        style="@style/StyleAdsRelativeLayout" />
+</RelativeLayout>

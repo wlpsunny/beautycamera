@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Blur">Blur</string>
+    <string name="Blush">Blush</string>
+    <string name="Brighten">Brighten</string>
+    <string name="Color">Color</string>
+    <string name="DarkCircle">DarkCircle</string>
+    <string name="Edit">Edit</string>
+    <string name="Editor">Editor</string>
+    <string name="Enlarge">Enlarge</string>
+    <string name="Erase">Erase</string>
+    <string name="EyeColor">Eye Color</string>
+    <string name="EyeLashes">EyeLash</string>
+    <string name="Foundation">Foundation</string>
+    <string name="LipColor">Lip Color</string>
+    <string name="Shapes">Shapes</string>
+    <string name="Share">Share</string>
+    <string name="Whiten">Whitten</string>
+    <string name="Whitten">Whitten</string>
+    <string name="Zoom">Zoom</string>
+
+    <string name="ad_attribution">Ad</string>
+    <string name="addtext">Add Text</string>
+    <string name="app_name">Beauty Camera</string>
+
+
+    <string name="blurphoto">Touch to Focus</string>
+    <string name="camera">CAMERA</string>
+    <string name="captions">Captions</string>
+
+    <string name="editcontrast">Contrast</string>
+    <string name="editexposure">Exposure</string>
+    <string name="edithightlightsave">Highlights Save</string>
+    <string name="editphoto">Edit Photo</string>
+    <string name="editshadowsave">Shadows Save</string>
+    <string name="editsharpen">Sharpen</string>
+    <string name="edittemperature">Temperature</string>
+    <string name="edittext">Edit Text</string>
+    <string name="editvignette">Vignette</string>
+    <string name="effects">Effects</string>
+    <string name="exampletext">Sample Text</string>
+
+
+    <string name="font">Font</string>
+    <string name="frames">Frames</string>
+    <string name="gallery">GALLERY</string>
+    <string name="icon_content_description">Dialog Icon</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_ok">OK</string>
+    <string name="more">More</string>
+    <string name="moreapps">More Awesome Apps</string>
+
+    <string name="mycreation">My Creation</string>
+
+
+    <string name="nophoto">No photo! Create your masterpieces now.</string>
+
+    <string name="permission_read_storage_rationale">Storage read permission is needed to pick files.</string>
+    <string name="permission_title_rationale">Permission needed</string>
+    <string name="permission_write_storage_rationale">Storage write permission is needed to save the image.</string>
+    <string name="photo_result_prefix">PhotoEditorApp_result_</string>
+    <string name="photo_saved_toast_string">Photo Saved!</string>
+    <string name="privacy">Privacy Policy</string>
+
+
+    <string name="rating_dialog_cancel">Cancel</string>
+    <string name="rating_dialog_experience">How was your experience with us?</string>
+    <string name="rating_dialog_feedback_title">Feedback</string>
+    <string name="rating_dialog_maybe_later">Maybe later</string>
+    <string name="rating_dialog_never">Never</string>
+    <string name="rating_dialog_submit">Submit</string>
+    <string name="rating_dialog_suggestions">Suggest us what went wrong and we\'ll work on it!</string>
+    <string name="rta_dialog_cancel">Later</string>
+    <string name="rta_dialog_message">If you enjoy using this app, would you mind taking a moment to rate it? It won\'t take more than a minute. Thank you for your support!</string>
+    <string name="rta_dialog_no">No, thanks</string>
+    <string name="rta_dialog_ok">Rate now</string>
+    <string name="rta_dialog_title">Rate this app</string>
+    <string name="s1">Save image</string>
+    <string name="s2">Allow Ad to store image in Picture gallery?</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
+    <string name="savephoto">Saved to Gallery</string>
+
+    <string name="share_text">I\'m using amazing Face Beauty! Get the free app at</string>
+    <string name="sharevia">Share via:</string>
+    <string name="sponsored_content">Sponsored Content</string>
+
+    <string name="stickers">Stickers</string>
+    <string name="viewlarger">Click on the image to view</string>
+    <string name="viewphoto">Photo Viewer</string>
+    <string name="app_folder">Beauty Camera</string>
+    <string name="txt_file_saved_successfully">File saved successfully</string>
+    <string name="temp">temp</string>
+
+    <string name="storage_permission_not_granted">Storage permission not granted</string>
+    <string name="phone_camera_permission_not_granted">Phone Camera permision not granted</string>
+
+    <!--Test-->
+    <string name="admob_banner_ads_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_ads_id_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_native_Ad_test">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="admob_open_Ad_test">ca-app-pub-3940256099942544/3419835294</string>
+
+
+</resources>

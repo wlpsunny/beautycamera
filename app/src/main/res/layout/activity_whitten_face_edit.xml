@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_banner_ads">
+
+        <LinearLayout
+            android:id="@+id/whitentitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/grid_top"
+                style="@style/FragmentTop"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="onBack"
+                        android:padding="@dimen/margin_15"
+                        android:src="@drawable/ic_back"/>
+                    <TextView
+                        android:id="@+id/txt_whittenEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/Whiten"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/whittenteeth_done_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ripple_effects"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_margin="12dp"
+                        android:clickable="false"
+                        android:padding="10dp"
+                        android:src="@drawable/done"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <view
+            android:id="@+id/whittenimg"
+            class="com.eagleapps.beautycam.draw.ImgViewTouchAndDraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearlayout"
+            android:layout_below="@+id/whitentitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY" />
+
+        <view
+            android:id="@+id/whittenimg1"
+            class="com.eagleapps.beautycam.draw.ImgViewTouchAndDraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearlayout"
+            android:layout_below="@+id/whitentitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_70"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_5">
+
+            <LinearLayout
+                android:id="@+id/whitten_button_apply_whitten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_whittenApply"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_whittenApply"
+                        android:src="@drawable/ic_whitten" />
+
+                    <TextView
+                        android:id="@+id/txt_whittenApply"
+                        style="@style/StyleText"
+                        android:text="@string/Whitten" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whitten_button_erasor_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_whittenErase"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_whittenErase"
+                        android:src="@drawable/ic_eraser" />
+
+                    <TextView
+                        android:id="@+id/txt_whittenErase"
+                        style="@style/StyleText"
+                        android:text="@string/Erase" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whitten_button_zoom_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effects"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/StyleRelativeLayout">
+
+                    <ImageView
+                        android:id="@+id/img_whittenZoom"
+                        style="@style/StyleImage"
+                        android:layout_above="@+id/txt_whittenZoom"
+                        android:src="@drawable/ic_zoom" />
+
+                    <TextView
+                        android:id="@+id/txt_whittenZoom"
+                        style="@style/StyleText"
+                        android:text="@string/Zoom" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_banner_ads"
+        style="@style/StyleAdsRelativeLayout" />
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_banner_ads">
+
+        <LinearLayout
+            android:id="@+id/editortitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/grid_top"
+                style="@style/FragmentTop"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="onBack"
+                        android:padding="@dimen/margin_15"
+                        android:src="@drawable/ic_back"/>
+                    <TextView
+                        android:id="@+id/txt_whittenEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/app_folder"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/facetuneditor_done_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ripple_effects">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@drawable/ic_save"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_5"
+                        android:paddingRight="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_5" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/editor_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/horizontalScrollView"
+            android:layout_below="@+id/editortitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/screen_bckground"
+                android:gravity="bottom"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_70"
+                android:layout_marginBottom="@dimen/dim_7"
+                android:layout_below="@+id/ll_1"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutWhitten"
+                    style="@style/EditLinearLayoutBottom">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_whitten"
+                            style="@style/EditImageViewBottom"
+                            android:layout_above="@+id/txt_whitten"
+                            android:src="@drawable/ic_whitten" />
+
+                        <TextView
+                            android:id="@+id/txt_whitten"
+                            style="@style/EditTextViewBottom"
+                            android:text="Whitten" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutBlur"
+                    style="@style/EditLinearLayoutBottom">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_blur"
+                            style="@style/EditImageViewBottom"
+                            android:layout_above="@+id/txt_blur"
+                            android:src="@drawable/ic_blur" />
+
+                        <TextView
+                            android:id="@+id/txt_blur"
+                            style="@style/EditTextViewBottom"
+                            android:text="Blur" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFoundation"
+                    style="@style/EditLinearLayoutBottom">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_foundation"
+                            style="@style/EditImageViewBottom"
+                            android:layout_above="@+id/txt_foundation"
+                            android:src="@drawable/ic_face" />
+
+                        <TextView
+                            android:id="@+id/txt_foundation"
+                            style="@style/EditTextViewBottom"
+                            android:text="Face" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutLips"
+                    style="@style/EditLinearLayoutBottom">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_lips"
+                            style="@style/EditImageViewBottom"
+                            android:layout_above="@+id/txt_lips"
+                            android:src="@drawable/ic_lip" />
+
+                        <TextView
+                            android:id="@+id/txt_lips"
+                            style="@style/EditTextViewBottom"
+                            android:text="Lip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutEyes"
+                    style="@style/EditLinearLayoutBottom">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_eyes"
+                            style="@style/EditImageViewBottom"
+                            android:layout_above="@+id/txt_eyes"
+                            android:src="@drawable/ic_eye" />
+
+                        <TextView
+                            android:id="@+id/txt_eyes"
+                            style="@style/EditTextViewBottom"
+                            android:text="Eye" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutBlush"
+                    style="@style/EditLinearLayoutBottom">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_blush"
+                            style="@style/EditImageViewBottom"
+                            android:layout_above="@+id/txt_blush"
+                            android:src="@drawable/ic_cheek" />
+
+                        <TextView
+                            android:id="@+id/txt_blush"
+                            style="@style/EditTextViewBottom"
+                            android:text="Cheek" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_banner_ads"
+        style="@style/StyleAdsRelativeLayout" />
+</RelativeLayout>
